@@ -1,0 +1,65 @@
+package behavior.observerpattern.publisher;
+
+import behavior.observerpattern.subscriber.Subscriber;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class WeatherAPI implements Publisher {
+    private float temp;
+    private float humidity;
+    private float pressure;
+
+    private List<Subscriber> subscribers = new ArrayList<>();
+
+    /*
+    public float getTemp() {
+        return temp;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
+    }
+     */
+
+    @Override
+    public void register(Subscriber subscriber) {
+        subscribers.add(subscriber);
+    }
+
+    @Override
+    public void remove(Subscriber subscriber) {
+        subscribers.remove(subscriber);
+    }
+
+    // pull 방식
+    /*
+    @Override
+    public void inform() {
+        for(Subscriber subscriber : subscribers) {
+            subscriber.display(this);
+        }
+    }
+     */
+
+    // push 방식
+    @Override
+    public void inform() {
+        for (Subscriber subscriber : subscribers) {
+            subscriber.update(temp, humidity, pressure);
+        }
+    }
+
+    public void measurementsChanged() {
+        temp = new Random().nextFloat() * 100;
+        humidity = new Random().nextFloat() * 100;
+        pressure = new Random().nextFloat() * 100;
+
+        inform();
+    }
+}
