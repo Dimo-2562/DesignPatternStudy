@@ -1,0 +1,34 @@
+package behavior.mementopattern;
+
+public class Client {
+    public static void main(String[] args) {
+        Editor editor = new Editor();
+        EditorHistory care = new EditorHistory();
+
+        editor.setText("design pattern 1 - Memento");
+        editor.setPos(10, 24);
+        System.out.println(editor.getState());
+        care.makeBackup(editor);
+
+        editor.setText("design pattern 2 - Iterator");
+        editor.setPos(22, 24);
+        System.out.println(editor.getState());
+        care.makeBackup(editor);
+
+        editor.setText("design pattern 3 - Prototype");
+        editor.setPos(44, 24);
+        System.out.println(editor.getState());
+        care.makeBackup(editor);
+
+        System.out.println("\n=== 복구 ===\n");
+
+        Editor obj = care.undo(editor);
+        System.out.println(obj.getState());
+
+        obj = care.undo(editor);
+        System.out.println(obj.getState());
+
+        obj = care.undo(editor);
+        System.out.println(obj.getState());
+    }
+}
