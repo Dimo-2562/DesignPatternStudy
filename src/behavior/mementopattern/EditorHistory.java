@@ -3,11 +3,11 @@ package behavior.mementopattern;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Command {
+public class EditorHistory {
 
     protected Deque<Editor.Snapshot> stack;
 
-    public Command() {
+    public EditorHistory() {
         this.stack = new ArrayDeque<>();
     }
 

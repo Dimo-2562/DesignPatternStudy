@@ -3,7 +3,7 @@ package behavior.mementopattern;
 public class Client {
     public static void main(String[] args) {
         Editor editor = new Editor();
-        Command care = new Command();
+        EditorHistory care = new EditorHistory();
 
         editor.setText("design pattern 1 - Memento");
         editor.setPos(10, 24);
