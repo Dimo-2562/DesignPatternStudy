@@ -13,6 +13,7 @@ public class WeatherAPI implements Publisher {
 
     private List<Subscriber> subscribers = new ArrayList<>();
 
+    /*
     public float getTemp() {
         return temp;
     }
@@ -24,6 +25,7 @@ public class WeatherAPI implements Publisher {
     public float getPressure() {
         return pressure;
     }
+     */
 
     @Override
     public void register(Subscriber subscriber) {
@@ -35,10 +37,21 @@ public class WeatherAPI implements Publisher {
         subscribers.remove(subscriber);
     }
 
+    // pull 방식
+    /*
     @Override
     public void inform() {
         for(Subscriber subscriber : subscribers) {
             subscriber.display(this);
+        }
+    }
+     */
+
+    // push 방식
+    @Override
+    public void inform() {
+        for (Subscriber subscriber : subscribers) {
+            subscriber.update(temp, humidity, pressure);
         }
     }
 
@@ -49,6 +62,4 @@ public class WeatherAPI implements Publisher {
 
         inform();
     }
-
-
 }
