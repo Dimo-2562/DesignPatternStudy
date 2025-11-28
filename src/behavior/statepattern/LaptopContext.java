@@ -1,8 +1,8 @@
-package statepattern;
+package behavior.statepattern;
 
-import statepattern.state.OffState;
-import statepattern.state.PowerState;
-import statepattern.state.SavingState;
+import behavior.statepattern.state.OffState;
+import behavior.statepattern.state.PowerState;
+import behavior.statepattern.state.SavingState;
 
 public class LaptopContext {
     private PowerState powerState;
