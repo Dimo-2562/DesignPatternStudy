@@ -1,4 +1,4 @@
-package strategypattern.strategy;
+package behavior.strategypattern.strategy;
 
 public class MasterCardStrategy implements PaymentStrategy {
 

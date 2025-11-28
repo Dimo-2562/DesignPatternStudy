@@ -1,9 +1,9 @@
-package strategypattern;
+package behavior.strategypattern;
 
-import strategypattern.context.Item;
-import strategypattern.context.ShoppingCart;
-import strategypattern.strategy.MasterCardStrategy;
-import strategypattern.strategy.MobilePayStrategy;
+import behavior.strategypattern.context.Item;
+import behavior.strategypattern.context.ShoppingCart;
+import behavior.strategypattern.strategy.MasterCardStrategy;
+import behavior.strategypattern.strategy.MobilePayStrategy;
 
 public class Client {
     public static void main(String[] args) {

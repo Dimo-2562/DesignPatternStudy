@@ -1,4 +1,4 @@
-package strategypattern.strategy;
+package behavior.strategypattern.strategy;
 
 public interface PaymentStrategy {
     void pay(int amount);

@@ -1,6 +1,6 @@
-package statepattern.state;
+package behavior.statepattern.state;
 
-import statepattern.LaptopContext;
+import behavior.statepattern.LaptopContext;
 
 public interface PowerState {
     void pushPowerButton(LaptopContext context);

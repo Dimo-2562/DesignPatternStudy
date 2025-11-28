@@ -1,4 +1,4 @@
-package statepattern;
+package behavior.statepattern;
 
 public class Client {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package strategypattern.context;
+package behavior.strategypattern.context;
 
 public class Item {
 

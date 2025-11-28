@@ -1,6 +1,6 @@
-package strategypattern.context;
+package behavior.strategypattern.context;
 
-import strategypattern.strategy.PaymentStrategy;
+import behavior.strategypattern.strategy.PaymentStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
