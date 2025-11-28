@@ -8,7 +8,7 @@ public class LaptopContext {
     private PowerState powerState;
 
     public LaptopContext() {
-        this.powerState = new OffState();
+        this.powerState = OffState.getInstance();
     }
 
     public void changeState(PowerState newState) {
@@ -17,7 +17,7 @@ public class LaptopContext {
 
     public void setSavingState() {
         System.out.println("현재 상태: Laptop power ON");
-        this.changeState(new SavingState());
+        this.changeState(SavingState.getInstance());
     }
 
     public void pushPowerButton(){
@@ -27,6 +27,5 @@ public class LaptopContext {
     public void printCurrentState(){
         System.out.println("변경 상태: " + this.powerState.getClass().getName());
     }
-
 
 }
