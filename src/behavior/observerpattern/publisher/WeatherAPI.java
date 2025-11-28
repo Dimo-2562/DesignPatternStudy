@@ -11,7 +11,7 @@ public class WeatherAPI implements Publisher {
     private float humidity;
     private float pressure;
 
-    List<Subscriber> subscribers = new ArrayList<Subscriber>();
+    private List<Subscriber> subscribers = new ArrayList<>();
 
     public float getTemp() {
         return temp;
