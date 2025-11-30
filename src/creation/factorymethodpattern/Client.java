@@ -1,17 +1,15 @@
 package creation.factorymethodpattern;
 
-import creation.factorymethodpattern.creator.BlackShipFactory;
-import creation.factorymethodpattern.creator.ShipFactory;
-import creation.factorymethodpattern.creator.WhiteShipFactory;
+import creation.factorymethodpattern.creator.EnumShipFactory;
 
 public class Client {
-    private void print(ShipFactory factory, String name) {
-        System.out.println(factory.orderShip(name));
+    private void print(EnumShipFactory enumShipFactory, String name) {
+        System.out.println(enumShipFactory.orderShip(name));
     }
 
     public static void main(String[] args) {
         Client c = new Client();
-        c.print(new WhiteShipFactory(), "White Ship");
-        c.print(new BlackShipFactory(), "Black Ship");
+        c.print(EnumShipFactory.WHITESHIPFACTORY, "White Ship");
+        c.print(EnumShipFactory.BLACKSHIPFACTORY, "Black Ship");
     }
 }
