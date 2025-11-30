@@ -1,8 +1,8 @@
 package creation.factorymethodpattern.product;
 
 public class WhiteShip extends ConcreteShip{
-    public WhiteShip() {
-        setName("whiteShip");
+    public WhiteShip(String name) {
+        setName(name);
         setColor("white");
     }
 }

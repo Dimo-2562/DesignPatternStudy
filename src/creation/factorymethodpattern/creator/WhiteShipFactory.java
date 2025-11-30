@@ -6,7 +6,7 @@ import creation.factorymethodpattern.product.WhiteShip;
 public class WhiteShipFactory implements ShipFactory {
 
     @Override
-    public Ship createShip() {
-        return new WhiteShip();
+    public Ship createShip(String name) {
+        return new WhiteShip(name);
     }
 }

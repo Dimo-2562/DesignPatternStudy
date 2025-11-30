@@ -6,10 +6,10 @@ public interface ShipFactory {
     default Ship orderShip(String name) {
         validate(name);
         prepareFor(name);
-        return createShip();
+        return createShip(name);
     }
 
-    Ship createShip();
+    Ship createShip(String name);
 
     private void validate(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException();
