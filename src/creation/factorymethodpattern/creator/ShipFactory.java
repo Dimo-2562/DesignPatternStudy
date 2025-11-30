@@ -2,23 +2,16 @@ package creation.factorymethodpattern.creator;
 
 import creation.factorymethodpattern.product.Ship;
 
-public class ShipFactory {
-    public static Ship orderShip(String name) {
+public interface ShipFactory {
+    default Ship orderShip(String name) {
         validate(name);
         prepareFor(name);
-
-        Ship ship = new Ship();
-        ship.setName(name);
-
-        if (name.equalsIgnoreCase("whiteship"))
-            ship.setColor("white");
-        else if (name.equalsIgnoreCase("blackship"))
-            ship.setColor("black");
-
-        return ship;
+        return createShip();
     }
 
-    private static void validate(String name) {
+    Ship createShip();
+
+    private void validate(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException();
     }
 

@@ -1,16 +1,11 @@
 package creation.factorymethodpattern;
 
-import creation.factorymethodpattern.creator.ShipFactory;
+import creation.factorymethodpattern.creator.WhiteShipFactory;
 import creation.factorymethodpattern.product.Ship;
 
 public class Client {
     public static void main(String[] args) {
-        Client client = new Client();
-
-        Ship whiteship = ShipFactory.orderShip("whiteship");
+        Ship whiteship = new WhiteShipFactory().orderShip("whiteShip");
         System.out.println(whiteship);
-
-        Ship blackship = ShipFactory.orderShip("blackship");
-        System.out.println(blackship);
     }
 }
