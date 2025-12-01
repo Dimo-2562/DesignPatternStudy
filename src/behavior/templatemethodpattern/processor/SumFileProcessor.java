@@ -15,4 +15,9 @@ public class SumFileProcessor extends FileProcessor {
     protected int getInitial() {
         return 0;
     }
+
+    @Override
+    protected void hook(){
+        System.out.println("SumFileProcessor Hook");
+    }
 }

@@ -21,6 +21,8 @@ abstract class FileProcessor {
                 result = calculate(result, Integer.parseInt(line));
             }
 
+            hook();
+
             return result;
         } catch (IOException e) {
             throw new IllegalArgumentException(path + " is not found", e);
@@ -30,4 +32,8 @@ abstract class FileProcessor {
     protected abstract int calculate(int result, int number);
 
     protected abstract int getInitial();
+
+    protected void hook() {
+
+    }
 }
