@@ -13,7 +13,7 @@ public class ReadWriteLockSingleton {
     private final Lock readLock = lock.readLock();
     private final Lock writeLock = lock.writeLock();
 
-    private Map<String, String> cache = new HashMap<>();
+    private final Map<String, String> cache = new HashMap<>();
 
     private ReadWriteLockSingleton() {}
 

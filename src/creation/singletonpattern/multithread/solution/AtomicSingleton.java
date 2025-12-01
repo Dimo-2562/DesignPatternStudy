@@ -7,9 +7,9 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AtomicSingleton {
     private static final AtomicSingleton INSTANCE = new AtomicSingleton();
 
-    private AtomicInteger counter = new AtomicInteger(0);
-    private AtomicLong totalAmount = new AtomicLong(0L);
-    private AtomicReference<String> status = new AtomicReference<>("READY");
+    private final AtomicInteger counter = new AtomicInteger(0);
+    private final AtomicLong totalAmount = new AtomicLong(0L);
+    private final AtomicReference<String> status = new AtomicReference<>("READY");
 
     private AtomicSingleton() {}
 

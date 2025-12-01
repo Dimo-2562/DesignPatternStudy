@@ -6,7 +6,7 @@ import java.util.Map;
 public class SynchronizedSingleton {
     private static final SynchronizedSingleton instance = new SynchronizedSingleton();
 
-    private Map<String, Integer> data = new HashMap<>();
+    private final Map<String, Integer> data = new HashMap<>();
     private int counter = 0;
 
     private SynchronizedSingleton() {}

@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteListSingleton {
     private static final CopyOnWriteListSingleton instance = new CopyOnWriteListSingleton();
 
-    private CopyOnWriteArrayList<String> observers = new CopyOnWriteArrayList<>();
+    private final CopyOnWriteArrayList<String> observers = new CopyOnWriteArrayList<>();
 
     private CopyOnWriteListSingleton() {}
 

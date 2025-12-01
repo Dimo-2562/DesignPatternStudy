@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ConcurrentMapSingleton {
     private static final ConcurrentMapSingleton INSTANCE = new ConcurrentMapSingleton();
 
-    private ConcurrentHashMap<Long, Integer> userScores = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Long, Integer> userScores = new ConcurrentHashMap<>();
 
     private ConcurrentMapSingleton() {
     }
