@@ -1,7 +1,7 @@
 package structure.adapterpattern;
 
 public class Adapter implements Target{
-    Service adaptee;
+    private Service adaptee;
 
     public Adapter(Service adaptee) {
         this.adaptee = adaptee;
