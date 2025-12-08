@@ -1,9 +1,9 @@
 package structure.adapterpattern;
 
-public class Adapter implements Target{
-    private Service adaptee;
+public class ServiceAdapter implements Target{
+    private ExistingService adaptee;
 
-    public Adapter(Service adaptee) {
+    public ServiceAdapter(ExistingService adaptee) {
         this.adaptee = adaptee;
     }
 
