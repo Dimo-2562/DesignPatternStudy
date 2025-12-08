@@ -1,29 +1,27 @@
 package creation.builderpattern;
 
-import creation.builderpattern.builder.Builder;
-import creation.builderpattern.builder.HouseBuilder;
-
 public class Client {
     public static void main(String[] args) {
-        Director director = new Director();
-        HouseBuilder builder = new HouseBuilder();
-
         System.out.println("=== Simple House ===");
-        director.makeSimpleHouse(builder);
-        House simpleResult = builder.getResult();
-        System.out.println(simpleResult);
+        House simpleHouse = new House.Builder()
+                .setRoofs(1)
+                .build();
+        System.out.println(simpleHouse);
 
         System.out.println("\n=== Complex House ===");
-        director.makeComplexHouse(builder);
-        House complexResult = builder.getResult();
-        System.out.println(complexResult);
+        House complexHouse = new House.Builder()
+                .setRoofs(4)
+                .setWalls(4)
+                .setWindows(2)
+                .build();
+        System.out.println(complexHouse);
 
-        System.out.println("\n=== Custom House (without Director) ===");
-        builder.reset();
-        builder.setRoofs(3)
+        System.out.println("\n=== Custom House ===");
+        House customHouse = new House.Builder()
+                .setRoofs(3)
                 .setWalls(6)
-                .setWindows(10);
-        House customHouse = builder.getResult();
+                .setWindows(10)
+                .build();
         System.out.println(customHouse);
     }
 }
