@@ -1,6 +1,6 @@
 package structure.decoratorpattern;
 
-import structure.decoratorpattern.component.DefaultNotifier;
+import structure.decoratorpattern.component.EmailNotifier;
 import structure.decoratorpattern.component.Notifier;
 import structure.decoratorpattern.decorator.FacebookDecorator;
 import structure.decoratorpattern.decorator.SMSDecorator;
@@ -12,7 +12,7 @@ public class Main {
         boolean smsEnabled = false;
         boolean slackEnabled = true;
 
-        Notifier notifier = new DefaultNotifier();
+        Notifier notifier = new EmailNotifier();
 
         if (facebookEnabled) {
             notifier = new FacebookDecorator(notifier);
