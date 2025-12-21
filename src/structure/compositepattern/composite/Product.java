@@ -1,8 +1,8 @@
 package structure.compositepattern.composite;
 
 public class Product implements Component{
-    String name;
-    int price;
+    private String name;
+    private int price;
 
     public Product(String name, int price) {
         this.name = name;

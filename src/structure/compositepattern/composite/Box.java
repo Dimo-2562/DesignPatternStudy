@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Box implements Component {
 
-    List<Component> components;
-    String name;
+    private List<Component> components;
+    private String name;
 
     public Box(String name) {
         components = new ArrayList<>();
@@ -15,6 +15,10 @@ public class Box implements Component {
 
     public void add(Component item){
         components.add(item);
+    }
+
+    public void remove(Component item){
+        components.remove(item);
     }
 
     public List<Component> getComponents() {
