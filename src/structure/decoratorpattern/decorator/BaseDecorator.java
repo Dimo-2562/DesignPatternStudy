@@ -2,7 +2,7 @@ package structure.decoratorpattern.decorator;
 
 import structure.decoratorpattern.component.Notifier;
 
-public class BaseDecorator implements Notifier {
+public abstract class BaseDecorator implements Notifier {
 
     private Notifier wrappee;
 
