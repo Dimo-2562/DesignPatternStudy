@@ -1,11 +1,14 @@
 package structure.flyweightpattern;
 
+import structure.flyweightpattern.flyweight.FontFactory;
+
 public class Client {
     public static void main(String[] args) {
-        Character c1 = new Character('h', "red", "Nanum", 12);
-        Character c2 = new Character('e', "white", "Nanum", 12);
-        Character c3 = new Character('l', "white", "Nanum", 12);
-        Character c4 = new Character('l', "blue", "Nanum", 12);
-        Character c5 = new Character('o', "white", "Nanum", 12);
+        FontFactory fontFactory = new FontFactory();
+        Character c1 = new Character('h', "red", fontFactory.getFont("nanum:12"));
+        Character c2 = new Character('e', "white", fontFactory.getFont("nanum:12"));
+        Character c3 = new Character('l', "white", fontFactory.getFont("nanum:12"));
+        Character c4 = new Character('l', "blue", fontFactory.getFont("nanum:12"));
+        Character c5 = new Character('o', "white", fontFactory.getFont("nanum:12"));
     }
 }
